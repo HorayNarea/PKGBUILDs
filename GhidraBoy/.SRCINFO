@@ -1,0 +1,17 @@
+pkgbase = ghidra-extension-ghidraboy-git
+	pkgdesc = Sharp SM83 / Game Boy extension for Ghidra
+	pkgver = r23.g42941e1
+	pkgrel = 1
+	url = https://github.com/Gekkio/GhidraBoy
+	arch = x86_64
+	license = Apache
+	makedepends = git
+	makedepends = gradle
+	makedepends = unzip
+	makedepends = ghidra
+	depends = ghidra
+	source = ghidra-extension-ghidraboy-git::git+https://github.com/Gekkio/GhidraBoy
+	sha512sums = SKIP
+
+pkgname = ghidra-extension-ghidraboy-git
+
