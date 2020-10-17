@@ -3,7 +3,7 @@
 _pkgname=ghidra-xtensa
 pkgname=ghidra-extension-$(echo $_pkgname | tr '[:upper:]' '[:lower:]')-git
 pkgver=r10.gb6866f4
-pkgrel=1
+pkgrel=2
 pkgdesc="Tensilica Xtensa processor module for Ghidra"
 arch=('x86_64')
 url=https://github.com/yath/${_pkgname}
@@ -37,11 +37,13 @@ package() {
   echo "done"
   ghidra_dir=$(dirname $(readlink -fe $(which ghidra)))
   cd $srcdir/${_pkgname}
-  
+
   install -d $pkgdir/${ghidra_dir}/Ghidra/Extensions
 
   # Extract built archive into destination folder
   unzip -u release.zip -d $pkgdir/${ghidra_dir}/Ghidra/Extensions/
 
   install -Dm 644 LICENSE -t $pkgdir/usr/share/licenses/$pkgname
+
+  chmod -R a+r $pkgdir
 }
