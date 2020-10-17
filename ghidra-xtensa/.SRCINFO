@@ -1,0 +1,18 @@
+pkgbase = ghidra-extension-ghidra-xtensa-git
+	pkgdesc = Tensilica Xtensa processor module for Ghidra
+	pkgver = r10.gb6866f4
+	pkgrel = 1
+	url = https://github.com/yath/ghidra-xtensa
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = perl
+	makedepends = gradle
+	makedepends = unzip
+	makedepends = ghidra
+	depends = ghidra
+	source = ghidra-extension-ghidra-xtensa-git::git+https://github.com/yath/ghidra-xtensa
+	sha512sums = SKIP
+
+pkgname = ghidra-extension-ghidra-xtensa-git
+
