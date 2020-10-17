@@ -2,18 +2,18 @@
 
 _pkgname=ghidra-xtensa
 pkgname=ghidra-extension-$(echo $_pkgname | tr '[:upper:]' '[:lower:]')-git
-pkgver=r10.gb6866f4
-pkgrel=3
+pkgver=r34.gc39a1d5
+pkgrel=4
 pkgdesc="Tensilica Xtensa processor module for Ghidra"
 arch=('x86_64')
-url=https://github.com/yath/${_pkgname}
+url=https://github.com/Ebiroll/${_pkgname}
 license=('MIT')
 provides=()
 conflicts=()
 depends=('ghidra')
 makedepends=('git' 'perl' 'unzip' 'ghidra')
 optdepends=()
-source=("$pkgname::git+https://github.com/yath/${_pkgname}")
+source=("$pkgname::git+https://github.com/Ebiroll/${_pkgname}")
 sha512sums=('SKIP')
 
 prepare() {
