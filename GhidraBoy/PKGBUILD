@@ -2,8 +2,8 @@
 
 _pkgname=GhidraBoy
 pkgname=ghidra-extension-$(echo $_pkgname | tr '[:upper:]' '[:lower:]')-git
-pkgver=r23.g42941e1
-pkgrel=2
+pkgver=r37.g040e531
+pkgrel=1
 pkgdesc="Sharp SM83 / Game Boy extension for Ghidra"
 arch=('x86_64')
 url=https://github.com/Gekkio/${_pkgname}
@@ -33,8 +33,6 @@ build() {
 
   _ghidra_dir=$(dirname $(readlink -fe $(which ghidra)))
 
-  ${_ghidra_dir}/support/sleigh -i ./data/sleighArgs.txt -a ./data/languages
-
   GHIDRA_INSTALL_DIR=${_ghidra_dir} gradle
 }
 
@@ -45,7 +43,7 @@ package() {
   install -d $pkgdir/${ghidra_dir}/Ghidra/Extensions
 
   # Extract built archive into destination folder
-  unzip -u dist/*.zip -d $pkgdir/${ghidra_dir}/Ghidra/Extensions/
+  unzip -u build/distributions/*.zip -d $pkgdir/${ghidra_dir}/Ghidra/Extensions/
 
   install -Dm 644 LICENSE -t $pkgdir/usr/share/licenses/$pkgname
 
