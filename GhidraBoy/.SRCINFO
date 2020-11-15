@@ -1,6 +1,6 @@
 pkgbase = ghidra-extension-ghidraboy-git
 	pkgdesc = Sharp SM83 / Game Boy extension for Ghidra
-	pkgver = r37.g040e531
+	pkgver = r43.g11395f5
 	pkgrel = 1
 	url = https://github.com/Gekkio/GhidraBoy
 	arch = x86_64
