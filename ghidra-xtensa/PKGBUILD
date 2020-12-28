@@ -2,8 +2,8 @@
 
 _pkgname=ghidra-xtensa
 pkgname=ghidra-extension-$(echo $_pkgname | tr '[:upper:]' '[:lower:]')-git
-pkgver=r34.gc39a1d5
-pkgrel=4
+pkgver=r35.g98356cb
+pkgrel=1
 pkgdesc="Tensilica Xtensa processor module for Ghidra"
 arch=('x86_64')
 url=https://github.com/Ebiroll/${_pkgname}

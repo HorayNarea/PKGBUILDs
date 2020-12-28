@@ -2,7 +2,7 @@
 
 _pkgname=GhidraBoy
 pkgname=ghidra-extension-$(echo $_pkgname | tr '[:upper:]' '[:lower:]')-git
-pkgver=r43.g11395f5
+pkgver=r45.g11253cc
 pkgrel=1
 pkgdesc="Sharp SM83 / Game Boy extension for Ghidra"
 arch=('x86_64')
